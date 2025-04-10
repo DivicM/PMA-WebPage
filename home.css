@@ -22,6 +22,9 @@ a{
     display: inline-block;
     transition: transform 0.3s ease, color 0.3 ease;
 }
+a:visited{
+    color:rgb(25, 45, 4);
+}
 a:hover
 {
     transform: scale(1.3);
