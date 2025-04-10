@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "nav main"
+    "nav footer";
+}
+
+header{
+    display: flex;
+    top: 0;
+    background-color: gainsboro;
+    position: sticky;
+    grid-area: header;
+    padding: 1em;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50.4px);
+    top: 50.4px;
+    grid-area: nav;
+    position: sticky;
+    align-self: start;
+    background-color: darkgrey;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+main{
+    grid-area: main;
+    width: 100%;
+    overflow: hidden;
+}
+footer{
+    grid-area: footer;
+    padding: 1em;
+    background-color: aquamarine;
+    text-align: center;
+
+}
+ul{
+    list-style-type:disc;
+    padding-left: 20px;
+}
+nav .profilna{
+align-self: center ;
+justify-content: center;
+padding-right: 10px;
+margin-top: 10px;
+margin-bottom: 50px;
+}
+.profilna img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.osobni-podatci{
+    margin-bottom: 20px;
+}
+.galerija{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.galerija img{
+    max-width: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+img{
+    border: 1px solid;
+    border-radius: 5px;
+}
+h2{
+    margin: 5px;
+    text-align: center;
+}
+p{
+    margin-left: 5px;
+}
+
+@media (max-width:800px) {
+    body{
+        grid-template-columns: 0.3fr 1fr;
+    }
+    .galerija{
+        flex-direction: column;
+        gap: 10px   ;
+    }
+    
+}
+
+
