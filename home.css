@@ -72,7 +72,7 @@ main{
 footer{
     grid-area: footer;
     padding: 1em;
-    background-color: aquamarine;
+    background-color: rgb(205, 237, 226);
     text-align: center;
 
 }
