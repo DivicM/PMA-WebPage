@@ -41,6 +41,12 @@ body{
     "nav main"
     "nav footer";
 }
+.btn{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    background-color: gray;
+}
 
 header{
     display: flex;
@@ -49,7 +55,7 @@ header{
     position: sticky;
     grid-area: header;
     padding: 1em;
-    justify-content: center;
+    justify-content: space-between;
 }
 nav{
     display: flex;
