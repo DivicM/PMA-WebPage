@@ -60,8 +60,8 @@ header{
 nav{
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 50.4px);
-    top: 50.4px;
+    height: calc(100vh - 55px);
+    top: 55px;
     grid-area: nav;
     position: sticky;
     align-self: start;
