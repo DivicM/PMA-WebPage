@@ -15,33 +15,34 @@
       <form action="">
         <h1>Login</h1>
         <div class="input-box">
-          <input type="text" placeholder="Korisnik" />
+          <input type="text" placeholder="Korisnik" id="log_ime" />
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Lozinka" />
+          <input type="password" placeholder="Lozinka" id="log_sifra" />
           <i class="bx bxs-lock"></i>
         </div>
-        <a href="home.html"><button type="button" class="btn">Login</button></a>
+  	    <button type="button" class="btn" id="btnLogin">Login</button>
       </form>
     </div>
     <div class="wrapper" class="wrap2">
       <form action="">
         <h1>Registracija</h1>
         <div class="input-box">
-          <input type="text" placeholder="Korisnik">
+          <input type="text" placeholder="Korisnik" id="reg_ime">
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Lozinka">
+          <input type="password" placeholder="Lozinka" id="reg_sifra">
           <i class="bx bxs-lock"></i>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Ponovi lozinku">
+          <input type="password" placeholder="Ponovi lozinku" id="reg_sifra_potvrda">
           <i class="bx bxs-lock"></i>
         </div>
-        <a href="home.html"><button type="button" class="btn">Registriraj</button></a>
+          <button type="button" class="btn" id="btnReg">Registriraj</button>
       </form>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
