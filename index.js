@@ -37,12 +37,20 @@ btnReg.addEventListener("click", (event) => {
     },
     body: JSON.stringify(DataToPost),
   })
-    .then((response) => response.json())
     .then((response) => {
-      console.log(response);
+      if (!response.ok) {
+        return response.json().then((data) => {
+          throw new Error(data.poruka || "Greška pri registraciji.");
+        });
+      }
+      return response.json();
+    })
+    .then((data) => {
+      alert(data.poruka || "Registracija uspješna!");
     })
     .catch((error) => {
-      console.log(error);
+      alert(error.message || "Došlo je do greške pri registraciji.");
+      console.error(error);
     });
 });
 

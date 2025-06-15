@@ -2,8 +2,32 @@ const express = require("express");
 const app = express();
 
 // CORS middleware — mora biti na vrhu
+// app.use(function (req, res, next) {
+//   res.setHeader("Access-Control-Allow-Origin", "http://localhost:5500");
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+//   );
+//   res.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "X-Requested-With, Content-Type"
+//   );
+//   res.setHeader("Access-Control-Allow-Credentials", true);
+
+//   if (req.method === "OPTIONS") {
+//     return res.sendStatus(200);
+//   }
+
+//   next();
+// });
 app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5500");
+  const allowedOrigins = ["http://localhost:5500", "http://127.0.0.1:5500"];
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
@@ -20,6 +44,7 @@ app.use(function (req, res, next) {
 
   next();
 });
+
 
 // Omogućujemo Expressu da čita JSON body
 app.use(express.json());
